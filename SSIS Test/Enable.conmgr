@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Enable"
+  DTS:DTSID="{62844D03-80E3-41B7-BE5D-93E4574EB3C2}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=AWSVIRT33.corp.wedc.org;User ID=wedcadmin;Initial Catalog=WedcEnable;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQNT9Xznw30iJsj+9492QxgAAAAACAAAAAAADZgAAwAAAABAAAAAcEuMT63l05Q46Qvc5BUJSAAAAAASAAACgAAAAEAAAAN5ZDKP6d/q+O75hT+VWKux4AAAAOPfNylSqHwMbJXmJCZ9Dne8mmE1nt1lpV1xrln/aNU0NN+QnhNk7fPB+ZSuLJ0D6fqesGKHI5j1XF4HHllAP30QjntpjokyrJHxOGtO9h02ZC6EYxC7VLquLR273J2TD+5/x6vidsjIArX0+4b/33mjl15mYf497FAAAAO6fQy0q7NlBLJZGopG1i0PFBvRz</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

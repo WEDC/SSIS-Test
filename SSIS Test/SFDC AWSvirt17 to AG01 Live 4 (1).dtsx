@@ -1,0 +1,87 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/7/2018 9:51:00 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DT121"
+  DTS:CreatorName="CORP\pnorman"
+  DTS:DTSID="{AB03186A-04D7-4C53-A279-329AEF8F2114}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.0800.60"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="EnABLE to AG01 Live 3"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{F0835D89-A469-4472-A9FE-C57DE8850787}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AG01]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F36BA1E8-39F6-413C-B1CD-37213809F689}"
+      DTS:ObjectName="AG01">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=SQLListener;Initial Catalog=RptgProd;Provider=SQLOLEDB.1;Integrated Security=SSPI;Connect Timeout=30;Application Name=SSIS-EnABLE to AG01 Live 3-{F36BA1E8-39F6-413C-B1CD-37213809F689}AG01;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Enable]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6E7C9103-9593-4372-806D-F21D06CCA4BD}"
+      DTS:ObjectName="Enable">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=www.gotoenable.com;User ID=wedcadmin;Initial Catalog=WedcEnable;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAlWqLUVbNDUWWlnFwAiwlvgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABDHlkdwKvmL8iv2GokF3EYAAAAAASAAACgAAAAEAAAAD59B9BqU82Hpj2Bi29cuOYYAAAANvIIUwzjK7gtDXCTRJiiEMGsgT4QR7CBFAAAANZMvPkOa0BhHWSp7kka6aaI3UKu</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\usp_Batch_SFDC_AG01_Live_4"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Run the fifth SFDC Virt17 to AG01 script"
+      DTS:DTSID="{90506F5F-1F80-40E4-8159-634D34950CDF}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="usp_Batch_SFDC_AG01_Live_4"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F36BA1E8-39F6-413C-B1CD-37213809F689}"
+          SQLTask:TimeOut="300"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="EXEC dbo.usp_Batch_SFDC_AG01_Live_4" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="237,42"
+          Id="Package\usp_Batch_SFDC_AG01_Live_4"
+          TopLeft="83,47" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

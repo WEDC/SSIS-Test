@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AG01"
+  DTS:DTSID="{39215B69-DBBC-4355-A283-8C08995568CD}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=SQLListener;Initial Catalog=RptgProd;Provider=SQLOLEDB.1;Integrated Security=SSPI;Connect Timeout=30;Application Name=SSIS-EnABLE to AG01 Live 2-{39215B69-DBBC-4355-A283-8C08995568CD}AG01;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
